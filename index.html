@@ -1,144 +1,562 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eglise NewLife Kinshasa">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAD Architecture</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Icons and CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="shortcut icon" href="Image/images (2).jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Mub Architecture</title>
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #222;
+    }
 
-   
+    /* === HERO VIDÉO === */
+    .Damas-hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .Damas-hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .Damas-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .Damas-overlay h1 {
+      font-size: 3rem;
+      animation: fadeInDown 1s ease;
+    }
+    .Damas-overlay p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* === SWIPER SLIDER === */
+    .Damas-slider {
+      padding: 60px 20px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    .swiper {
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .slide-content {
+      padding: 15px;
+    }
+    .slide-content h3 {
+      margin: 0;
+      color: #ff5e62;
+    }
+
+    /* === MAD AUJOURD'HUI === */
+    .Damas-intro {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .Damas-intro h2 {
+      font-size: 2rem;
+      color: #ff5e62;
+      margin-bottom: 20px;
+    }
+    .Damas-intro p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    /* === WHATSAPP FLOAT === */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 50px; height: 50px;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Header / Navbar -->
-   
-   
+
+<div class="top-bar" id="topBar">
+  <div class="left">
+    <button id="toggle-header">Nous découvrir ▼</button>
+  </div>
+  <div class="right">
+    <a href="login.html" class="login-btn">Se connecter</a>
+  </div>
+</div>
 
 
-<header>
-    <nav class="navbar">
-        <a href="#" class="nav-logo">
-            <img src="image/mad/AZQSDFGH_1 - Photo.jpg" alt="Logo">
-        </a>
-
-        <button id="menu-toggle-button" class="fas"></button>
-
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about.html">À propos</a></li>
-            <li><a href="service.html">Service</a></li>
-            <li><a href="projet.html">Projet</a></li>
-            <li><a href="réalisation.html">Réalisation</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<header id="main-header">
+  <nav class="navbar">
+    <button id="menu-toggle-button">☰</button>
+    <ul class="nav-menu" id="nav-menu">
+      
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="projet.html">Projet</a></li>
+      <li><a href="réalisation.html">Réalisation</a></li>
+    
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 
 
-
- <main>
-   
-<!-- vidéo background -->
- <div class="video-background">
-  <video autoplay muted loop playsinline>
-    <source src="image/mad/Video moses 123.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la vidéo.
- </main>
-
+<style>
  
+#menu-toggle-button{
+display: none;
+}
 
 
-<div class="content-section">
-    <!-- Vidéo à gauche -->
-    <div class="video-container">
-        <video controls>
-            <source src="image/mad/Video moses 123.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-        </video>
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.top-bar.open-bg {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #112244;
+}
+
+#toggle-header {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+#main-header {
+  /* background: #112244; */
+  background: white;
+  padding: 20px 30px;
+  display: none;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 60px; /* affiché sous la top-bar */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#main-header.open {
+  display: block;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+}
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* par défaut centré */
+}
+
+.nav-menu a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    background: #112244;
+  }
+
+  #toggle-header {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .right {
+    align-self: flex-end;
+  }
+
+  #main-header {
+    top: 85px; /* au lieu de 100px */
+  padding: 15px 20px;
+  background: #112244;
+  height: 100vh;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+.nav-menu a {
+  font-size: 17px;
+  padding: 8px 80px;
+  text-align: center;
+  width: 100%; /* pour centrer visuellement dans toute la largeur */
+}
+}
+
+</style>
+
+
+
+
+
+<script>
+  const toggleBtn = document.getElementById('toggle-header');
+  const topBar = document.getElementById('topBar');
+  const mainHeader = document.getElementById('main-header');
+
+  let menuOpen = false;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuOpen = !menuOpen;
+    mainHeader.classList.toggle('open', menuOpen);
+    topBar.classList.toggle('open-bg', menuOpen);
+  });
+
+  // Fermer si clic en dehors
+  document.addEventListener('click', (e) => {
+    const clickedOutside = !mainHeader.contains(e.target) && !toggleBtn.contains(e.target);
+    if (menuOpen && clickedOutside) {
+      mainHeader.classList.remove('open');
+      topBar.classList.remove('open-bg');
+      menuOpen = false;
+    }
+  });
+</script>
+
+
+
+
+  <!-- HERO VIDÉO -->
+  <section class="Damas-hero">
+    
+    <video autoplay muted loop playsinline>
+      <source src="image/mad/Video moses 123.mp4" type="video/mp4">
+    </video>
+    <div class="Damas-overlay">
+      <h1>L’architecture qui change le paysage</h1>
+      <p>MAD vous accompagne dans la création d’espaces modernes, esthétiques et durables à Kinshasa et au-delà.</p>
     </div>
+  </section>
 
-    <!-- Actualités à droite -->
-    <div class="news-container">
-        <div class="news-item">
-            <div class="news-title">MAD Assainissement</div>
-            <div class="news-date">avril 24, 2025</div>
-            <div class="buttons">
-                <button>Consulter</button>
-            </div>
+  <!-- SLIDER SWIPER -->
+  <section class="Damas-slider">
+    <h2>Nos Réalisations Récentes</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="image/mad/1234_1 - Photo_2 - Photo.jpg" alt="Projet 1" />
+          <div class="slide-content">
+            <h3>HÔPITAUX HJ</h3>
+            <p>22309, Boulevard Lumumba | 2016</p>
+          </div>
         </div>
 
-        <div class="news-item">
-            <div class="news-title">MAD: Remise des modèles de diplômes LMD aux finalistes 2023-2024.</div>
-            <div class="news-date">avril 24, 2025</div>
-            <div class="buttons">
-                <button>Télécharger</button>
-            </div>
+        <div class="swiper-slide">
+          <img src="image/mad/1_1 - Photo.jpg" alt="Projet 2" />
+          <div class="slide-content">
+            <h3>HÔTEL HILTON</h3>
+            <p>Wagenia, Kinshasa | 2023</p>
+          </div>
         </div>
 
-        <div class="news-item">
-            <div class="news-title">MAD : Lancement des cartes nationales d’étudiants.</div>
-            <div class="news-date">avril 24, 2025</div>
-            <div class="buttons">
-                <button>Télécharger</button>
-            </div>
+        <div class="swiper-slide">
+          <img src="image/mad/1_2 - Photo.jpg" alt="Projet 3" />
+          <div class="slide-content">
+            <h3>MAMA YEMO</h3>
+            <p>Avenue de l’Hôpital | 2023</p>
+          </div>
         </div>
+
+        <div class="swiper-slide">
+          <img src="image/mad/454648_4 - Photo.jpg" alt="Projet 4" />
+          <div class="slide-content">
+            <h3>SUPREME AUTO</h3>
+            <p>12e Rue Limete | 2021</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="image/mad/AZQSDFGH_5 - Photo.jpg" alt="Projet 5" />
+          <div class="slide-content">
+            <h3>CENTRE CONCO</h3>
+            <p>Avenue Wagenia | 2021</p>
+          </div>
+        </div>
+
+      </div>
     </div>
-</div>
+  </section>
 
- 
-<!-- Popup -->
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <h3>Commande rapide</h3>
-    <form>
-      <input type="text" placeholder="Nom complet" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Votre projet (maison, bureau...)" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-
-    <hr style="margin: 20px 0;">
-    <p style="text-align: center;">Ou</p>
-
-    <a href="https://wa.me/243979143408?text=Bonjour,+je+suis+intéressé+par+vos+services+d'architecture." target="_blank" class="btn-whatsapp">Discuter sur WhatsApp</a>
-  </div>
-</div>
-
-<section id="accueil" class="hero">
-  <div class="overlay">
-    <h2 class="hero-title">Créer des espaces qui inspirent</h2>
-    <p class="hero-text">
-      MAD est une agence d'architecture spécialisée dans la création de bâtiments modernes, durables et élégants.
-      De la conception à la réalisation, nous donnons vie à vos idées.
+  <!-- INTRODUCTION MAD -->
+  <section class="Damas-intro">
+    <h2>MAD aujourd’hui</h2>
+    <p>
+      Forts d’une expertise reconnue, nous accompagnons nos clients de la conception à la réalisation de leurs projets architecturaux à Kinshasa, Bukavu, et au-delà. Notre engagement : créativité, rigueur, et excellence.
     </p>
-    <a href="réalisation.html" class="btn">Voir nos réalisations</a>
+  </section>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/243979143408" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    new Swiper(".mySwiper", {
+      loop: true,
+      centeredSlides: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+    });
+  </script>
+
+
+<section class="Damas-vision">
+  <div class="Damas-vision-overlay">
+    <h2>Notre Vision 2030</h2>
+    <p>MAD ambitionne de devenir une référence africaine dans la conception d’espaces verts, intelligents, durables et connectés. Nous façonnons les villes de demain avec audace et responsabilité.</p>
   </div>
 </section>
 
- 
- <div style="height: 80px;"></div>
+<style>
+  .Damas-vision {
+    background: url('image/mad/123ER_6\ -\ Photo.jpg') center/cover fixed;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  .Damas-vision-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+  }
+  .Damas-vision h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffb17a;
+  }
+</style>
 
-    <!-- Footer -->
-   <footer class="footer-modern">
+
+
+<section class="Damas-philosophie">
+  <div class="Damas-philo-left">
+    <span class="Damas-subtitle">NOTRE PHILOSOPHIE</span>
+    <h2>Entre tradition<br>-et Innovation</h2>
+
+    <div class="Damas-tabs">
+      <span class="Damas-tab active" onclick="changePhilo('harmonie')">Harmonie</span>
+      <span class="Damas-tab" onclick="changePhilo('identite')">Identité valorisée</span>
+      <span class="Damas-tab" onclick="changePhilo('iconiques')">Iconiques</span>
+    </div>
+
+    <p id="Damas-philo-text">
+      L’architecture MAD recherche l’harmonie entre le site, l’environnement et la fonction. Nos bâtiments respectent l’équilibre entre les volumes, la lumière et la matière.
+    </p>
+  </div>
+
+  <div class="Damas-philo-right">
+    <img src="image/mad/1234_1 - Photo_5 - Photo.jpg" alt="Architecture intérieure" />
+  </div>
+</section>
+<style>
+  .Damas-philosophie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  background: #fff;
+}
+
+.Damas-philo-left {
+  flex: 1 1 500px;
+}
+
+.Damas-subtitle {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.Damas-philo-left h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.Damas-tabs {
+  margin: 30px 0 15px;
+  display: flex;
+  gap: 25px;
+}
+
+.Damas-tab {
+  font-weight: 600;
+  cursor: pointer;
+  color: #ccc;
+  position: relative;
+}
+
+.Damas-tab.active {
+  color: #000;
+}
+.Damas-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+
+.Damas-philo-left p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.Damas-philo-right {
+  flex: 1 1 400px;
+}
+.Damas-philo-right img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .Damas-philosophie {
+    flex-direction: column;
+  }
+}
+
+</style>
+
+<script>
+  function changePhilo(tab) {
+    const text = document.getElementById("Damas-philo-text");
+    const tabs = document.querySelectorAll(".Damas-tab");
+    tabs.forEach(t => t.classList.remove("active"));
+    event.target.classList.add("active");
+
+    if (tab === "harmonie") {
+      text.innerHTML = "L’architecture MAD recherche l’harmonie entre le site, l’environnement et la fonction. Nos bâtiments respectent l’équilibre entre les volumes, la lumière et la matière.";
+    } else if (tab === "identite") {
+      text.innerHTML = "Nous utilisons des matériaux, techniques et formes inspirés du patrimoine local, en leur apportant une touche contemporaine et des innovations durables.";
+    } else if (tab === "iconiques") {
+      text.innerHTML = "Nos projets sont conçus pour marquer les esprits et s’inscrire dans la mémoire urbaine, en combinant identité, fonctionnalité et impact visuel.";
+    }
+  }
+</script>
+
+
+
+
+
+ <!-- Footer -->
+ <footer class="footer-modern">
   <div class="footer-container">
 
     <div class="footer-logo-section">
@@ -192,103 +610,10 @@
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2025 MAD Architecture. Tous droits réservés.</p>
+    <p>&copy; 2025 LAD Architecture. Tous droits réservés.</p>
   </div>
 
 </footer>
 
-
-
-
-
-
-
-
-<!-- Bouton WhatsApp -->
-<a href="https://wa.me/243979143408?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations" class="whatsapp-float" target="_blank" aria-label="Contact WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-  window.addEventListener("scroll", function () {
-    const box = document.querySelector(".fade-in");
-    if (!box) return;
-    const boxTop = box.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.9;
-    if (boxTop < triggerPoint) {
-      box.classList.add("show");
-    }
-  });
-</script>
-
-
-<script>
-  window.addEventListener("scroll", function () {
-    const box = document.querySelector(".fade-in");
-    if (!box) return;
-    const boxTop = box.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.9;
-    if (boxTop < triggerPoint) {
-      box.classList.add("show");
-    }
-  });
-</script>
-<script>
-  
-  // statistique
-     const counters = document.querySelectorAll('.counter');
-  let started = false;
-
-  function startCounters() {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = 0;
-      const increment = target / 200;
-
-      const updateCount = () => {
-        if (count < target) {
-          count += increment;
-          counter.innerText = Math.ceil(count);
-          setTimeout(updateCount, 10);
-        } else {
-          counter.innerText = target >= 1000000
-            ? "+" + (target / 1000000).toFixed(1) + "M"
-            : target;
-        }
-      };
-      updateCount();
-    });
-  }
-
-  window.addEventListener('scroll', () => {
-    const statsSection = document.querySelector('.stats-section');
-    const sectionTop = statsSection.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (!started && sectionTop < windowHeight - 100) {
-      startCounters();
-      started = true;
-    }
-  });
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("menu-toggle-button");
-    const navMenu = document.getElementById("nav-menu");
-
-    toggleBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      toggleBtn.classList.toggle("close-icon");
-    });
-  });
-</script>
-    <!-- Scroll top -->
-    <button id="scrollToTopBtn" class="scrollToTopBtn" onclick="scrollToTop()">↑</button>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
