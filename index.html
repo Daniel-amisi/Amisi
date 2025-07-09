@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+   
   <style>
     body {
       margin: 0;
@@ -109,6 +109,7 @@
       font-size: 1.1rem;
     }
 
+
     /* === WHATSAPP FLOAT === */
     .whatsapp-float {
       position: fixed;
@@ -147,7 +148,7 @@
       <li><a href="service.html">Service</a></li>
       <li><a href="projet.html">Projet</a></li>
       <li><a href="réalisation.html">Réalisation</a></li>
-    
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -380,6 +381,7 @@ display: none;
     </p>
   </section>
 
+
   <!-- WHATSAPP FLOAT -->
   <a href="https://wa.me/243979143408" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
@@ -434,122 +436,97 @@ display: none;
 
 
 
-<section class="Damas-philosophie">
-  <div class="Damas-philo-left">
-    <span class="Damas-subtitle">NOTRE PHILOSOPHIE</span>
-    <h2>Entre tradition<br>-et Innovation</h2>
 
-    <div class="Damas-tabs">
-      <span class="Damas-tab active" onclick="changePhilo('harmonie')">Harmonie</span>
-      <span class="Damas-tab" onclick="changePhilo('identite')">Identité valorisée</span>
-      <span class="Damas-tab" onclick="changePhilo('iconiques')">Iconiques</span>
+
+<section class="Damas-timeline">
+  <h2>Notre parcours architectural</h2>
+  <div class="Damas-timeline-container">
+    <div class="Damas-timeline-item">
+      <span class="Damas-date">2016</span>
+      <div class="Damas-content">
+        <h4>HJ Hôpitaux</h4>
+        <p>Kintambo, Kinshasa</p>
+      </div>
     </div>
-
-    <p id="Damas-philo-text">
-      L’architecture MAD recherche l’harmonie entre le site, l’environnement et la fonction. Nos bâtiments respectent l’équilibre entre les volumes, la lumière et la matière.
-    </p>
-  </div>
-
-  <div class="Damas-philo-right">
-    <img src="image/mad/1234_1 - Photo_5 - Photo.jpg" alt="Architecture intérieure" />
+    <div class="Damas-timeline-item">
+      <span class="Damas-date">2021</span>
+      <div class="Damas-content">
+        <h4>Centre CONCO</h4>
+        <p>Wagenia, Kinshasa</p>
+      </div>
+    </div>
+    <div class="Damas-timeline-item">
+      <span class="Damas-date">2023</span>
+      <div class="Damas-content">
+        <h4>Hôtel Hilton</h4>
+        <p>Gombe, Kinshasa</p>
+      </div>
+    </div>
   </div>
 </section>
+
 <style>
-  .Damas-philosophie {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-  align-items: center;
-  background: #fff;
-}
-
-.Damas-philo-left {
-  flex: 1 1 500px;
-}
-
-.Damas-subtitle {
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  color: #999;
-  letter-spacing: 1px;
-}
-
-.Damas-philo-left h2 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin: 15px 0;
-  line-height: 1.2;
-}
-
-.Damas-tabs {
-  margin: 30px 0 15px;
-  display: flex;
-  gap: 25px;
-}
-
-.Damas-tab {
-  font-weight: 600;
-  cursor: pointer;
-  color: #ccc;
-  position: relative;
-}
-
-.Damas-tab.active {
-  color: #000;
-}
-.Damas-tab.active::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #000;
-}
-
-.Damas-philo-left p {
-  font-size: 1rem;
-  color: #444;
-  max-width: 500px;
-  line-height: 1.6;
-}
-
-.Damas-philo-right {
-  flex: 1 1 400px;
-}
-.Damas-philo-right img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 768px) {
-  .Damas-philosophie {
-    flex-direction: column;
+  .Damas-timeline {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
   }
-}
-
+  .Damas-timeline h2 {
+    color: #21105f;
+    margin-bottom: 40px;
+  }
+  .Damas-timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    padding-left: 30px;
+  }
+  .Damas-timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ff5e62;
+  }
+  .Damas-timeline-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+  }
+  .Damas-date {
+    font-weight: bold;
+    color: #ff5e62;
+    background: #fff;
+    border: 2px solid #ff5e62;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    z-index: 2;
+  }
+  .Damas-content {
+    background: #f5f5f5;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: left;
+    flex: 1;
+  }
 </style>
 
-<script>
-  function changePhilo(tab) {
-    const text = document.getElementById("Damas-philo-text");
-    const tabs = document.querySelectorAll(".Damas-tab");
-    tabs.forEach(t => t.classList.remove("active"));
-    event.target.classList.add("active");
 
-    if (tab === "harmonie") {
-      text.innerHTML = "L’architecture MAD recherche l’harmonie entre le site, l’environnement et la fonction. Nos bâtiments respectent l’équilibre entre les volumes, la lumière et la matière.";
-    } else if (tab === "identite") {
-      text.innerHTML = "Nous utilisons des matériaux, techniques et formes inspirés du patrimoine local, en leur apportant une touche contemporaine et des innovations durables.";
-    } else if (tab === "iconiques") {
-      text.innerHTML = "Nos projets sont conçus pour marquer les esprits et s’inscrire dans la mémoire urbaine, en combinant identité, fonctionnalité et impact visuel.";
-    }
-  }
-</script>
+
+
+
+
+
 
 
 
@@ -615,5 +592,147 @@ display: none;
 
 </footer>
 
+
+
+<style>
+  
+  .footer-modern {
+  background: #061d3a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo-section {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* rend l'image ronde */
+  border: 3px solid #f90; /* facultatif : bordure orange */
+}
+
+
+.footer-logo-section p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #f90;
+  margin-right: 12px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1 1 160px;
+  min-width: 150px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #f90;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  color: #ddd;
+  margin-bottom: 6px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+.footer-contact i {
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* WhatsApp bouton flottant */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    max-width: 300px;
+  }
+
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-socials {
+    gap: 10px;
+  }
+}
+
+</style>
 </body>
 </html>
