@@ -27,12 +27,12 @@
         <button id="menu-toggle-button" class="fas"></button>
 
         <ul class="nav-menu" id="nav-menu">
-            <li><a href="index.html">Accueil</a></li>
+        
             <li><a href="about.html">À propos</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="projet.html">Projet</a></li>
             <li><a href="réalisation.html">Réalisation</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -228,32 +228,11 @@
   window.addEventListener('load', revealOnScroll);
 </script>
 
-<div class="equipe-section">
-  <h2>Notre Équipe</h2>
-  <div class="profiles">
-    
 
-    <div class="profile-card">
-      <img src="image/key/IMG-20240606-WA0042.jpg" alt="Jean Makiese" class="profile-photo">
-      <h4 class="profile-name">Ketsia Key</h4>
-    </div>
 
-    <div class="profile-card">
-      <img src="image/key/Screenshot_20240901-210032_1.png" alt="Jean Makiese" class="profile-photo">
-      <h4 class="profile-name">Arly Arlette</h4>
-    </div>
 
-    <div class="profile-card">
-      <img src="image/key/WhatsApp Image 2025-02-16 à 14.37.54_26f86411.jpg" alt="Jean Makiese" class="profile-photo">
-      <h4 class="profile-name">Dan Amisi</h4>
-    </div>
 
-    <div class="profile-card">
-      <img src="image/key/IMG-20240401-WA0029.jpg" alt="Jean Makiese" class="profile-photo">
-      <h4 class="profile-name">Dayanah Amisi</h4>
-    </div>
-  </div>
-</div>
+
 
 
 <!-- Font Awesome -->
@@ -290,6 +269,220 @@
 </section>
 
 
+<!-- Notre equipes -->
+<div class="equipe-section">
+  <h2>Notre Équipe</h2>
+  <div class="profiles">
+    
+
+    <div class="profile-card">
+      <img src="image/key/IMG-20240606-WA0042.jpg" alt="Jean Makiese" class="profile-photo">
+      <h4 class="profile-name">Ketsia Key</h4>
+    </div>
+
+    <div class="profile-card">
+      <img src="image/key/Screenshot_20240901-210032_1.png" alt="Jean Makiese" class="profile-photo">
+      <h4 class="profile-name">Arly Arlette</h4>
+    </div>
+
+    <div class="profile-card">
+      <img src="image/key/WhatsApp Image 2025-02-16 à 14.37.54_26f86411.jpg" alt="Jean Makiese" class="profile-photo">
+      <h4 class="profile-name">Dan Amisi</h4>
+    </div>
+
+    <div class="profile-card">
+      <img src="image/key/IMG-20240401-WA0029.jpg" alt="Jean Makiese" class="profile-photo">
+      <h4 class="profile-name">Dayanah Amisi</h4>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="Damas-timeline">
+  <h2>Notre parcours architectural</h2>
+  <div class="Damas-timeline-container">
+    <div class="Damas-timeline-item">
+      <span class="Damas-date">2016</span>
+      <div class="Damas-content">
+        <h4>HJ Hôpitaux</h4>
+        <p>Kintambo, Kinshasa</p>
+      </div>
+    </div>
+    <div class="Damas-timeline-item">
+      <span class="Damas-date">2021</span>
+      <div class="Damas-content">
+        <h4>Centre CONCO</h4>
+        <p>Wagenia, Kinshasa</p>
+      </div>
+    </div>
+    <div class="Damas-timeline-item">
+      <span class="Damas-date">2023</span>
+      <div class="Damas-content">
+        <h4>Hôtel Hilton</h4>
+        <p>Gombe, Kinshasa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .Damas-timeline {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .Damas-timeline h2 {
+    color: #21105f;
+    margin-bottom: 40px;
+  }
+  .Damas-timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    padding-left: 30px;
+  }
+  .Damas-timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ff5e62;
+  }
+  .Damas-timeline-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+  }
+  .Damas-date {
+    font-weight: bold;
+    color: #ff5e62;
+    background: #fff;
+    border: 2px solid #ff5e62;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    z-index: 2;
+  }
+  .Damas-content {
+    background: #f5f5f5;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: left;
+    flex: 1;
+  }
+</style>
+
+<style>
+ .Damas-temoignages {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .Damas-temoignages h2 {
+      color: black;
+      margin-bottom: 30px;
+    }
+    .Damas-temoignages blockquote {
+      max-width: 600px;
+      margin: auto;
+      background: #fdf2ec;
+      padding: 30px;
+      border-radius: 10px;
+      font-style: italic;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+</style>
+
+
+  <div class="services">
+    <div class="service">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3>Études et Conception</h3>
+      <p>Espaces uniques et audacieux adaptés à leur environnement.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-user-cog"></i>
+      <h3>Conseil et Expertise</h3>
+      <p>Solutions sur mesure alliant attentes et contraintes techniques.</p>
+    </div>
+    <!-- <div class="service">
+      <i class="fas fa-tools"></i>
+      <h3>Rénovation des bâtiments</h3>
+      <p>Transformation de bâtiments avec respect du patrimoine.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-hands-helping"></i>
+      <h3>Assistance technique</h3>
+      <p>Accompagnement de la conception à la réalisation.</p>
+    </div> -->
+    <div class="service">
+      <i class="fas fa-couch"></i>
+      <h3>Design intérieur</h3>
+      <p>Espaces élégants, confortables et bien pensés.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-city"></i>
+      <h3>Aménagement urbain</h3>
+      <p>Création de lieux extérieurs vivants et accueillants.</p>
+    </div>
+  </div>
+
+
+<style>
+      .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #eee;
+    }
+    .service i {
+      font-size: 40px;
+      color: #444;
+      margin-bottom: 15px;
+      transition: color 0.3s;
+    }
+    .service h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #222;
+    }
+    .service p {
+      color: #555;
+      font-size: 14px;
+    }
+    .service:hover {
+       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .service:hover i {
+      color: #007bff;
+    }
+  </style>
+
+
+
+
+
+
+
+
         <!-- Language selector -->
         <!-- <div id="languageSelector">
             <select id="language" onchange="changeLanguage()">
@@ -306,7 +499,6 @@
         <p id="content">Le contenu de ce site changera en fonction de la langue choisie.</p> -->
     </main>
 
-    <!-- Footer
 <footer class="footer-modern">
   <div class="footer-container">
 
@@ -364,7 +556,7 @@
     <p>&copy; 2025 LAD Architecture. Tous droits réservés.</p>
   </div>
 
-</footer> -->
+</footer> 
 
 
 
